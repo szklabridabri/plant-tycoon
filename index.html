@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Tycoon</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <h1>🌱 Plant Tycoon <button class="button" onclick="resetGame()">🔄 Resetuj grę</button></h1>
+  <div class="container">
+    <div class="card">
+      <h2>Ekonomia</h2>
+      <h4>Monety: <span id="coins">5</span></h4>
+      <h3>Nasiona</h3>
+      <div id="seeds"></div>
+      <div id="fruits"></div>
+    </div>
+
+    <div class="card">
+      <h2>Pole uprawne</h2>
+      <div class="field" id="field"></div>
+      <button class="button" onclick="expandField()">Rozbuduj pole (+3 miejsca)</button>
+    </div>
+
+    <div class="card">
+      <h2>Sklep</h2>
+      <div id="shop"></div>
+    </div>
+
+    <div class="card">
+      <h2>Kupiec</h2>
+      <div id="universal"></div>
+    </div>
+  </div>
+
+  <script src="javascriptdogry.js"></script>
+</body>
+</html>
