@@ -230,8 +230,8 @@
     }
 
     function resetGame() {
-      localStorage.removeItem("plant-tycoon-save");
-      location.reload();
+        localStorage.removeItem("plant-tycoon-save");
+        location.href = location.href; // pełne przeładowanie
     }
     
     function renderAll() {
