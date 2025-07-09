@@ -13,8 +13,8 @@
       pumpkin:   { label: "Dynia",       price: 35000, growth: 680, yield: 3 },
       corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 3 },
       watermelon:{ label: "Arbuz",       price: 300000, growth: 1300, yield: 4 },
-      grape:     { label: "Winogrono",   price: 100000, growth: 1700, yield: 4 },
-      pineapple: { label: "Ananas",      price: 350000, growth: 3200, yield: 4 }
+      grape:     { label: "Winogrono",   price: 1000000, growth: 1700, yield: 4 },
+      pineapple: { label: "Ananas",      price: 3500000, growth: 3200, yield: 4 }
     };
 
     const MUTATIONS = [
