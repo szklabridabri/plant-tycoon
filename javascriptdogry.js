@@ -8,13 +8,16 @@
       carrot:    { label: "Marchewka",   price: 50,  growth: 50,  yield: 1 },
       cucumber:  { label: "Ogórek",      price: 140, growth: 80,  yield: 1 },
       lettuce:   { label: "Sałata",      price: 600,  growth: 130,  yield: 1 },
-      blueberry: { label: "Borówka",     price: 1250, growth: 290,  yield: 2 },
-      pepper:    { label: "Papryka",     price: 10000, growth: 420, yield: 2 },
-      pumpkin:   { label: "Dynia",       price: 35000, growth: 680, yield: 3 },
-      corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 3 },
-      watermelon:{ label: "Arbuz",       price: 300000, growth: 1300, yield: 4 },
-      grape:     { label: "Winogrono",   price: 1000000, growth: 1700, yield: 4 },
-      pineapple: { label: "Ananas",      price: 3500000, growth: 3200, yield: 4 }
+      blueberry: { label: "Borówka",     price: 1250, growth: 290,  yield: 1 },
+      pepper:    { label: "Papryka",     price: 10000, growth: 420, yield: 1 },
+      pumpkin:   { label: "Dynia",       price: 35000, growth: 680, yield: 1 },
+      corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 1 },
+      watermelon:{ label: "Arbuz",       price: 300000, growth: 1300, yield: 1 },
+      grape:     { label: "Winogrono",   price: 1000000, growth: 1700, yield: 1 },
+      pineapple: { label: "Ananas",      price: 3500000, growth: 3200, yield: 1 },
+      dreamfruit:{ label: "Owoc Marzeń", price: 10000000, growth: 3500, yield: 1 },
+      greenberry:{ label: "Ziel Jagoda", price: 20000000, growth: 5000, yield: 1 },
+      maskfruit: { label: "Maska(Event)",price: 25000000, growth: 6500, yield: 1 }
     };
 
     const MUTATIONS = [
@@ -27,7 +30,8 @@
       { name: 'lucky', chance: 1 / 777, multiplier: 50 },
       { name: 'prismatic', chance: 1 / 800, multiplier: 60 },
       { name: 'high-powered', chance: 1 / 1000, multiplier: 100 },
-      { name: 'blessed', chance: 1 / 1200, multiplier: 150 }
+      { name: 'blessed', chance: 1 / 1200, multiplier: 150 },
+      { name: 'glitched', chance: 1 / 2000, multiplier: 250}
     ];
 
     let coins = 5;
@@ -36,7 +40,7 @@
     let plots = Array(3).fill(null); // Start z 3 miejscami
 
     function expandField() {
-      if (plots.length >= 9) return;
+      if (plots.length >= 15) return;
 
       const cost = plots.length === 3 ? 50 : 150;
       if (coins < cost) {
