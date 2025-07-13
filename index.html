@@ -2,44 +2,54 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plant Tycoon</title>
-  <link rel="stylesheet" href="./styless.css">
+  <link rel="stylesheet" href="styless.css">
 </head>
 <body>
-  <h1>🌱 Plant Tycoon <button class="button" onclick="resetGame()">🔄 Resetuj grę</button></h1>
-  <div class="container">
-    <div class="card">
-      <h2>Ekonomia</h2>
-      <h4>Monety: <span id="coins">5</span></h4>
-      <h3>Nasiona</h3>
-      <div id="seeds"></div>
-      <div id="fruits"></div>
-    </div>
 
-    <div class="card">
-      <h2>Pole uprawne</h2>
-      <div class="field" id="field"></div>
-      <button class="button" onclick="expandField()">Rozbuduj pole (+3 miejsca)</button>
-    </div>
+<header>
+  <h1>Plant Tycoon 🍓🌽🍅</h1>
+</header>
 
-    <div class="card">
-      <h2>Sklep</h2>
-      <div id="shop"></div>
-    </div>
+<main>
+  <section>
+    <p>💰 Monety: <span id="coins">0</span></p>
+    <input type="text" id="codeInput" placeholder="Wpisz kod..." />
+    <button class="button" onclick="useCode()">Użyj kodu</button>
+  </section>
 
-    <div class="card">
-      <h2>Kupiec</h2>
-      <div id="universal"></div>
-    </div>
-    <div class="card">
-      <h2>Wpisz kod nagrody 💎</h2>
-      <input type="text" id="reward-code" placeholder="Wpisz kod..." class="button" style="width: 100%; margin-bottom: 10px;">
-      <button onclick="redeemCode()" class="button">Zrealizuj</button>
-      <p id="reward-message"></p>
-    </div>
-  </div>
+  <section>
+    <h2>Nasiona</h2>
+    <div id="seeds"></div>
+  </section>
 
-  <script src="./javascriptdogry.js"></script>
+  <section>
+    <h2>Sklep</h2>
+    <div id="shop"></div>
+  </section>
+
+  <section>
+    <h2>Twoje Pole</h2>
+    <div id="field"></div>
+    <button class="button" onclick="expandField()">Rozbuduj pole</button>
+  </section>
+
+  <section>
+    <h2>Owoce</h2>
+    <div id="fruits"></div>
+  </section>
+
+  <section>
+    <h2>Sprzedaż</h2>
+    <div id="universal"></div>
+  </section>
+
+  <section>
+    <button class="button" onclick="resetGame()">🔁 Zresetuj grę</button>
+  </section>
+</main>
+
+<script src="javascriptdogry.js"></script>
+
 </body>
 </html>
