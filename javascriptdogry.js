@@ -21,9 +21,9 @@ const MUTATIONS = [
   { name: 'maska', chance: 1/300, multiplier: 25 }
 ];
 
-const GROW_CODE = "konewka1243";
-const MULT2_CODE = "mnoznik2x";
-const MULT3_CODE = "mnoznik3x";
+const GROW_CODE = "qawsedrftgyh";
+const MULT2_CODE = "azsxdcfvgbhn";
+const MULT3_CODE = "zxcasdqwe";
 
 let coins = 5;
 const seeds = {}, fruits = {};
