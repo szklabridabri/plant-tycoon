@@ -173,7 +173,7 @@ function useCode() {
       }
     }
     alert("Kod aktywowany: Wszystkie rośliny natychmiast dojrzały!");
-    code1 = "hshdhdhdjsj";
+    code1 = "bruh";
     renderAll();
     saveGame();
     return;
