@@ -245,4 +245,4 @@ function renderAll() {
 
 loadGame();
 renderAll();
-setInterval(renderAll, 1000
+setInterval(renderAll, 1000);
