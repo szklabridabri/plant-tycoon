@@ -190,15 +190,6 @@ if (mutBonusLeft > 0) {
       }
     }
 
-    function cancelPlant(i) {
-      const plot = plots[i];
-      if (plot && Date.now() < plot.cancelUntil) {
-        seeds[plot.type]++;
-        plots[i] = null;
-        renderAll();
-      }
-    }
-
     function harvest(i) {
       const plot = plots[i];
       if (plot && Date.now() - plot.planted >= plot.growth * 1000) {
