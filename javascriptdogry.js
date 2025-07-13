@@ -21,6 +21,10 @@ const MUTATIONS = [
   { name: 'maska', chance: 1/300, multiplier: 25 }
 ];
 
+const GROW_CODE = "konewka1243";
+const MULT2_CODE = "mnoznik2x";
+const MULT3_CODE = "mnoznik3x";
+
 let coins = 5;
 const seeds = {}, fruits = {};
 Object.keys(SEEDS).forEach(k => { seeds[k] = 0; fruits[k] = []; });
@@ -158,56 +162,50 @@ function sellFruit(t, total) {
   saveGame();
 }
 
-let code1 = "konewka123";
-let code2 = "mnoznik2x";
-let code3 = "mnoznik3x";
-
 function useCode() {
-  const codeEl = document.getElementById("codeInput");
-  const code = codeEl.value.trim().toLowerCase();
+  const code = document.getElementById("codeInput").value.trim().toLowerCase();
 
-  if (code === code1) {
-    for (let i = 0; i < plots.length; i++) {
-      if (plots[i]) {
-        plots[i].planted = Date.now() - plots[i].growth * 1000;
+  if (code === GROW_CODE) {
+    if (localStorage.getItem("used-" + GROW_CODE)) {
+      alert("Ten kod już został użyty.");
+    } else {
+      for (let i = 0; i < plots.length; i++) {
+        if (plots[i]) {
+          plots[i].planted = Date.now() - plots[i].growth * 1000;
+        }
       }
+      localStorage.setItem("used-" + GROW_CODE, "true");
+      alert("Kod aktywowany: Wszystkie rośliny gotowe do zbioru!");
     }
-    alert("Kod aktywowany: Wszystkie rośliny natychmiast dojrzały!");
-    code1 = "bruh";
-    renderAll();
-    saveGame();
-    return;
   }
 
-  if (code === code2 || code === code2) {
-    if (localStorage.getItem("used-mult2x")) {
+  else if (code === MULT2_CODE) {
+    if (localStorage.getItem("used-" + MULT2_CODE)) {
       alert("Ten kod już został użyty.");
     } else {
       MUTATIONS.forEach(m => m.chance *= 2);
-      localStorage.setItem("used-mult2x", "true");
+      localStorage.setItem("used-" + MULT2_CODE, "true");
       alert("Kod aktywowany: Mutacje mają 2x większą szansę!");
-      code2 = "jdjdhdhwj"
     }
-    renderAll();
-    saveGame();
-    return;
   }
 
-  if (code === code3 || code === code3) {
-    if (localStorage.getItem("used-mult3x")) {
+  else if (code === MULT3_CODE) {
+    if (localStorage.getItem("used-" + MULT3_CODE)) {
       alert("Ten kod już został użyty.");
     } else {
       MUTATIONS.forEach(m => m.chance *= 3);
-      localStorage.setItem("used-mult3x", "true");
+      localStorage.setItem("used-" + MULT3_CODE, "true");
       alert("Kod aktywowany: Mutacje mają 3x większą szansę!");
-      code3 = "djudhdhsjdisuwhs";
     }
-    renderAll();
-    saveGame();
-    return;
   }
 
-  alert("Nieprawidłowy kod.");
+  else {
+    alert("Nieprawidłowy kod.");
+  }
+
+  document.getElementById("codeInput").value = "";
+  renderAll();
+  saveGame();
 }
 
 function saveGame() {
@@ -231,8 +229,9 @@ function loadGame() {
 
 function resetGame() {
   localStorage.removeItem("plant-tycoon-save");
-  localStorage.removeItem("used-mult2x");
-  localStorage.removeItem("used-mult3x");
+  localStorage.removeItem("used-" + GROW_CODE);
+  localStorage.removeItem("used-" + MULT2_CODE);
+  localStorage.removeItem("used-" + MULT3_CODE);
   location.reload();
 }
 
