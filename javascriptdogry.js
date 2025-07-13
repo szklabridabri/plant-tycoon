@@ -207,6 +207,39 @@
     
 
     setInterval(renderAll, 1000);
+    let mutBonusLeft = 0;
+    let mutBonusMultiplier = 1;
+
+    function redeemCode() {
+      const code = document.getElementById("reward-code").value.trim().toUpperCase();
+      const msg = document.getElementById("reward-message");
+
+      if (code === "KONEWKA123") {
+        let count = 0;
+        plots.forEach((plot, i) => {
+          if (plot && Date.now() - plot.planted < plot.growth * 1000) {
+            plot.planted = Date.now() - plot.growth * 1000;
+            count++;
+          }
+        });
+       msg.textContent = `✅ Przyspieszono wzrost ${count} roślin.`;
+     }
+     else if (code === "MUTACJE2X") {
+       mutBonusLeft = 3;
+       mutBonusMultiplier = 2;
+       msg.textContent = "✅ Następne 3 sadzenia mają 2× większą szansę na mutacje!";
+     }
+     else if (code === "MUTACJE3X") {
+       mutBonusLeft = 4;
+       mutBonusMultiplier = 3;
+       msg.textContent = "✅ Następne 4 sadzenia mają 3× większą szansę na mutacje!";
+     }
+     else {
+       msg.textContent = "❌ Nieprawidłowy kod.";
+     }
+
+ document.getElementById("reward-code").value = "";
+}
 
     // ---- ZAPIS / ODCZYT STANU GRY ----
     function saveGame() {
