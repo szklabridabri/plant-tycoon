@@ -206,6 +206,7 @@ function redeemCode() {
       if (plot && Date.now() - plot.planted < plot.growth * 1000) {
         plot.planted = Date.now() - plot.growth * 1000;
         count++;
+        alert('test');
       }
     });
     msg.textContent = `✅ Przyspieszono wzrost ${count} roślin.`;
