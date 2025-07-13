@@ -167,14 +167,17 @@
         seeds[t]--;
         let mutations = [];
         for (const mut of MUTATIONS) {
-          const chance = mut.chance / (mutBonusMultiplier || 1);
-            if (Math.random() < chance) {
-              mutations.push(mut.name);
-            }
-      }
+  const baseChance = mut.chance;
+  const bonusMultiplier = mutBonusMultiplier || 1;
+  if (Math.random() < baseChance * bonusMultiplier) {
+    mutations.push(mut.name);
+  }
+}
 if (mutBonusLeft > 0) {
   mutBonusLeft--;
-  if (mutBonusLeft === 0) mutBonusMultiplier = 1;
+  if (mutBonusLeft === 0) {
+    mutBonusMultiplier = 1;
+  }
 }
         plots[i] = {
           type: t,
