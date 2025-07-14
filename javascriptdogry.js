@@ -10,7 +10,9 @@ const SEEDS = {
   blueberry: { label: "Borówka",     price: 1250, growth: 290, yield: 1 },
   pepper:    { label: "Papryka",     price: 10000, growth: 420, yield: 1 },
   pumpkin:   { label: "Dynia",       price: 35000, growth: 680, yield: 1 },
-  corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 1 }
+  corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 1 },
+  greenfruit:{ label: "Zielona Jagoda", price: 650000, growth: 1000, yield: 1 },
+  darkgrapes:{ label: "Mroczne Winogrona", price: 1700000, growth: 1350, yield: 1 }
 };
 
 const MUTATIONS = [
@@ -18,7 +20,8 @@ const MUTATIONS = [
   { name: 'gold', chance: 1/30, multiplier: 4 },
   { name: 'rainbow', chance: 1/100, multiplier: 10 },
   { name: 'huge', chance: 1/250, multiplier: 20 },
-  { name: 'maska', chance: 1/300, multiplier: 25 }
+  { name: 'glitched', chance: 1/500, multiplier: 35 },
+  { name: 'godly', chance: 1/1000, multiplier: 70 }
 ];
 
 const GROW_CODE = "qawsedrftgyh";
