@@ -104,7 +104,7 @@ function renderShop() {
   const shop = document.getElementById("shop"); shop.innerHTML = "";
   for (const t in SEEDS) {
     const { label, price } = SEEDS[t];
-    shop.innerHTML += `<button class="button" onclick="buySeed('${t}')">Kup ${label} (💰${price})</button>`;
+    shop.innerHTML += `<button class="button" onclick="buySeed('${t}')">Kup ${label} ({price}$)</button>`;
   }
 }
 
@@ -154,7 +154,7 @@ function renderUniversal() {
       }
       total += price;
     }
-    div.innerHTML += `<div>${items.length}× ${SEEDS[t].label} za 💰${Math.floor(total)} <button class="button" onclick="sellFruit('${t}', ${total})">Sprzedaj</button></div>`;
+    div.innerHTML += `<div>${items.length}× ${SEEDS[t].label} za ${Math.floor(total)}$ <button class="button" onclick="sellFruit('${t}', ${total})">Sprzedaj</button></div>`;
   }
 }
 
