@@ -23,7 +23,7 @@ const MUTATIONS = [
 
 const GROW_CODE = "qawsedrftgyh";
 const MULT2_CODE = "azsxdcfvgbhn";
-const MULT3_CODE = "zxcasdqwe";
+const MULT3_CODE = "qwerty";
 
 let coins = 5;
 const seeds = {}, fruits = {};
