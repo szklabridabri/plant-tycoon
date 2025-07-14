@@ -12,7 +12,7 @@ const SEEDS = {
   pumpkin:   { label: "Dynia",       price: 35000, growth: 680, yield: 1 },
   corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 1 },
   greenfruit:{ label: "Zielona Jagoda", price: 650000, growth: 1000, yield: 1 },
-  darkgrapes:{ label: "Mroczne Winogrona", price: 1700000, growth: 1350, yield: 1 }
+  darkgrapes:{ label: "MroczneWinogrona", price: 1700000, growth: 1350, yield: 1 }
 };
 
 const MUTATIONS = [
