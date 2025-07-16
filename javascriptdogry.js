@@ -104,7 +104,7 @@ function renderShop() {
   const shop = document.getElementById("shop"); shop.innerHTML = "";
   for (const t in SEEDS) {
     const { label, price } = SEEDS[t];
-    shop.innerHTML += `<button class="button resetBut" onclick="buySeed('${t}')">Kup ${label} (${price})</button>`;
+    shop.innerHTML += `<button class="button shopBut" onclick="buySeed('${t}')">Kup ${label} (${price})</button>`;
   }
 }
 
