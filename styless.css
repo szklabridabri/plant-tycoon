@@ -79,6 +79,10 @@
     margin-left: 5px;
   }
 
+  .resetBut {
+    background-color: red;
+  }
+
   input[type="text"] {
     padding: 10px;
     width: 100%;
