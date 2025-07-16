@@ -94,6 +94,16 @@
     margin: 0.25rem 0;
   }
 
+  #shop,
+  #seeds,
+  #field,
+  #fruits,
+  #universal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   /* Responsive tweaks */
   @media (max-width: 600px) {
     html {
