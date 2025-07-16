@@ -79,6 +79,10 @@
     margin-left: 5px;
   }
 
+  .shopBut {
+    height: 80px;
+  }
+
   .resetBut {
     background-color: red;
   }
