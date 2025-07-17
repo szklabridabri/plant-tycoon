@@ -11,8 +11,10 @@ const SEEDS = {
   pepper:    { label: "Papryka",     price: 10000, growth: 420, yield: 1 },
   pumpkin:   { label: "Dynia",       price: 35000, growth: 680, yield: 1 },
   corn:      { label: "Kukurydza",   price: 120000, growth: 840, yield: 1 },
-  greenfruit:{ label: "Zielona Jagoda", price: 650000, growth: 1000, yield: 1 },
-  darkgrapes:{ label: "Mroczne Winogrona", price: 1700000, growth: 1350, yield: 1 }
+  greenfruit:{ label: "Zielona Jagoda", price: 650000, growth: 1100, yield: 1 },
+  darkgrapes:{ label: "Mroczne Winogrona", price: 1700000, growth: 1500, yield: 1 },
+  dragonfrt: { label: "Dragon Fruit", price: 10000000, growth: 2400, yield: 1 },
+  chewinggum:{ label: "Owoc Gumy do Żucia (EVENT)", price: 120000000, growth: 3600, yield: 1 },
 };
 
 const MUTATIONS = [
