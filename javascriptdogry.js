@@ -1,4 +1,4 @@
-const UNIVERSAL_MULTIPLIER = 1.2;
+const UNIVERSAL_MULTIPLIER = 1.1;
 
 const SEEDS = {
   tomato:    { label: "Pomidor",     price: 2,  growth: 15,   yield: 1 },
