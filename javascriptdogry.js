@@ -36,7 +36,7 @@ Object.keys(SEEDS).forEach(k => { seeds[k] = 0; fruits[k] = []; });
 let plots = Array(3).fill(null);
 
 function expandField() {
-  if (plots.length >= 9) return;
+  if (plots.length >= 12) return;
   const cost = plots.length === 3 ? 50 : 150;
   if (coins < cost) {
     alert(`Potrzebujesz ${cost} monet do rozbudowy pola.`);
@@ -90,7 +90,7 @@ function harvest(i) {
 }
 
 function renderEconomy() {
-  document.getElementById("coins").textContent = coins.toFixed(2);
+  document.getElementById("coins").textContent = coins.toFixed(2) + " (" + coins.toExponential(2) + ")";
   const sDiv = document.getElementById("seeds"); sDiv.innerHTML = "";
   for (const t in seeds) {
     sDiv.innerHTML += `<p>${SEEDS[t].label}: ${seeds[t]}</p>`;
